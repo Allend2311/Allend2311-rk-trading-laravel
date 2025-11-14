@@ -31,7 +31,7 @@ return [
     */
 
     'deprecations' => [
-        'channel' => env('LOG_DEPRECATIONS_CHANNEL', 'null'),
+        'channel' => env('LOG_DEPRECATIONS_CHANNEL', 'stderr_emergency'),
         'trace' => false,
     ],
 
@@ -117,6 +117,15 @@ return [
         'emergency' => [
             'driver' => 'monolog',
             'handler' => NullHandler::class,
+        ],
+
+        'stderr_emergency' => [
+            'driver' => 'monolog',
+            'level' => 'emergency',
+            'handler' => StreamHandler::class,
+            'with' => [
+                'stream' => 'php://stderr',
+            ],
         ],
     ],
 
