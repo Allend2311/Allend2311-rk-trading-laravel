@@ -1,8 +1,8 @@
 {
   "build": {
-    "builder": "NIXPACKS"
+    "builder": "DOCKERFILE"
   },
   "deploy": {
-    "startCommand": "heroku-php-apache2 public/"
+    "startCommand": "apache2-foreground -D FOREGROUND"
   }
 }
