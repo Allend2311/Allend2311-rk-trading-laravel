@@ -1,5 +1,5 @@
 [phases.setup]
-nixPkgs = ["...", "php82", "php82Packages.composer", "apacheHttpd", "nodejs", "yarn"]
+nixPkgs = ["...", "php83", "php83Packages.composer", "apacheHttpd", "nodejs", "yarn"]
 
 [phases.install]
 cmds = [
