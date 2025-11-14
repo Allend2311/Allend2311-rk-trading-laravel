@@ -27,6 +27,19 @@ class DatabaseSeeder extends Seeder
             'email_verified' => true,
         ]);
 
+        // Create customer user
+        \App\Models\User::create([
+            'name' => 'Customer User',
+            'fname' => 'Customer',
+            'lname' => 'User',
+            'email' => 'customer@rktrading.com',
+            'password' => bcrypt('password'),
+            'address' => 'Manila, Philippines',
+            'birthday' => '1995-05-15',
+            'user_type' => 'customer',
+            'email_verified' => true,
+        ]);
+
         // Create sample products
         \App\Models\Product::create([
             'name' => 'Solar LED Bulb 12W',
