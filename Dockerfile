@@ -43,6 +43,7 @@ RUN if [ -f .env ]; then php artisan key:generate; fi
 # Set permissions
 RUN chown -R www-data:www-data /var/www/html \
     && chmod -R 755 /var/www/html \
+    && mkdir -p /var/www/html/storage/logs \
     && chmod -R 775 /var/www/html/storage \
     && chmod -R 775 /var/www/html/bootstrap/cache
 
